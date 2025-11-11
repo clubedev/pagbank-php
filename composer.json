@@ -1,0 +1,29 @@
+{
+    "name": "clubedev/pagbank-php",
+    "description": "Biblioteca PHP para integração com a API PagBank, com autenticação via token do Clube Dev.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clube Dev",
+            "email": "contato@clubedev.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^7.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClubeDev\\PagBank\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ClubeDev\\PagBank\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
