@@ -5,8 +5,10 @@ namespace ClubeDev\PagBank\Domain\Payment;
 class Pix
 {
     public function __construct(
-        private string $expiration_date,
-        private float $amount
+        public string $expiration_date,
+        public float $amount,
+        public ?string $qrcode = null,
+        public ?string $qrcode_image = null
     ) {}
 
     public function toArray(): array
@@ -14,6 +16,8 @@ class Pix
         return array_filter([
             'expiration_date' => $this->expiration_date,
             'amount' => $this->amount,
+            'qrcode' => $this->qrcode,
+            'qrcode_image' => $this->qrcode_image,
         ]);
     }
 }

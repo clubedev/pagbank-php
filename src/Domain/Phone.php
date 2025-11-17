@@ -5,9 +5,9 @@ namespace ClubeDev\PagBank\Domain;
 class Phone
 {
     public function __construct(
-        private int $country,
-        private int $area,
-        private int $number
+        public int $country,
+        public int $area,
+        public int $number
     ) {}
 
     public function toArray(): array

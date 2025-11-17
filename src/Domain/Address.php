@@ -5,14 +5,14 @@ namespace ClubeDev\PagBank\Domain;
 class Address
 {
     public function __construct(
-        private string $street,
-        private ?string $number,
-        private ?string $complement,
-        private string $locality,
-        private string $city,
-        private string $state,
-        private string $state_code,
-        private string $postal_code,
+        public string $street,
+        public string $locality,
+        public string $city,
+        public string $state_code,
+        public string $postal_code,
+        public ?string $state = null,
+        public ?string $number = null,
+        public ?string $complement = null,
     ) {}
 
     public function toArray(): array

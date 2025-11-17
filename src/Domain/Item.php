@@ -5,9 +5,9 @@ namespace ClubeDev\PagBank\Domain;
 class Item
 {
     public function __construct(
-        private string $name,
-        private int $quantity,
-        private float $unit_amount
+        public string $name,
+        public int $quantity,
+        public float $unit_amount
     ) {}
 
     public function toArray(): array
