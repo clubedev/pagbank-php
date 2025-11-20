@@ -13,7 +13,7 @@ use ClubeDev\PagBank\Domain\Payment\Title;
 use ClubeDev\PagBank\Domain\Phone;
 use ClubeDev\PagBank\Domain\Shipping;
 
-class CreatePaymentResponse
+class GetPaymentResponse
 {
     public function __construct(private array $data) 
     { }
@@ -155,7 +155,11 @@ class CreatePaymentResponse
             pix: $pix,
             title: $title,
             credit_card: $creditCard,
-            paid_at: $this->data['payment']['paid_at'] ?? null
+            paid_at: $this->data['payment']['paid_at'] ?? null,
+            status: $this->data['payment']['status'] ?? null,
+            full_refunded: $this->data['payment']['full_refunded'] ?? null,
+            paid: $this->data['payment']['paid'] ?? null,
+            refunded: $this->data['payment']['refunded'] ?? null
         ) : null;
     }
 }

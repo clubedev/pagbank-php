@@ -16,7 +16,7 @@ class CreatePaymentRequest
         private Payment $payment,
         private ?array $items = null,
         private ?Shipping $shipping = null,
-        private ?array $webhooks_urls = null
+        private ?string $webhook_url = null
     ) {
         foreach($this->items ?? [] as $item) {
             if(!($item instanceof Item)) {
@@ -41,7 +41,7 @@ class CreatePaymentRequest
             'payment' => $this->payment?->toArray(),
             'items' => !empty($this->items) ? array_map(fn(Item $item) => $item->toArray(), $this->items) : null,
             'shipping' => $this->shipping?->toArray(),
-            'webhooks_urls' => $this->webhooks_urls,
+            'webhooks_urls' => [$this->webhook_url],
         ]);
     }
 }

@@ -14,6 +14,10 @@ class Payment
         public ?Title $title = null,
         public ?CreditCard $credit_card = null,
         public ?string $paid_at = null,
+        public ?string $status = null,
+        public ?bool $full_refunded = null,
+        public ?float $paid = null,
+        public ?float $refunded = null,
     ) {
         if(empty($this->pix) && empty($this->title) && empty($this->credit_card)) {
             throw new ValidationException('Informe uma forma de pagamento.');
@@ -26,7 +30,11 @@ class Payment
             'pix' => $this->pix?->toArray(),
             'title' => $this->title?->toArray(),
             'credit_card' => $this->credit_card?->toArray(),
-            'paid_at' => $this->paid_at?->toArray(),
+            'paid_at' => $this->paid_at,
+            'status' => $this->status,
+            'full_refunded' => $this->full_refunded,
+            'paid' => $this->paid,
+            'refunded' => $this->refunded,
         ]);
     }
 }

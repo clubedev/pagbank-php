@@ -45,13 +45,41 @@ class PagBankClient
         return [];
     }
 
-    public function get(string $endpoint): array
+    public function get(string $endpoint, array $data = []): array
     {
         try {
-            $response = $this->http->get($endpoint);
+            $response = $this->http->get($endpoint, ['query' => $data]);
             return json_decode($response->getBody()->getContents(), true);
-        } catch (\Throwable $e) {
-            throw new PagBankException($e->getMessage(), $e->getCode());
+        } catch (ClientException $e) {
+            $body = (string) $e->getResponse()->getBody();
+            $json = json_decode($body, true);
+            switch ($json['type'] ?? null) {
+                case 'clubedev_token_not_found':
+                    throw new ClubedevException($body, $e->getCode());
+                    break;
+
+                default:
+                    throw new PagBankException($body, $e->getCode());
+            }
+        }
+    }
+
+    public function delete(string $endpoint, array $data = []): array
+    {
+        try {
+            $response = $this->http->delete($endpoint, ['query' => $data]);
+            return json_decode($response->getBody()->getContents(), true);
+        } catch (ClientException $e) {
+            $body = (string) $e->getResponse()->getBody();
+            $json = json_decode($body, true);
+            switch ($json['type'] ?? null) {
+                case 'clubedev_token_not_found':
+                    throw new ClubedevException($body, $e->getCode());
+                    break;
+
+                default:
+                    throw new PagBankException($body, $e->getCode());
+            }
         }
     }
 }
