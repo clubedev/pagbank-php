@@ -52,6 +52,19 @@ Para utilizar a biblioteca, você precisa fornecer:
 
 Ambos são obrigatórios para validação, segurança e auditoria das operações.
 
+### Adquirindo e configurando seu Token ClubeDev
+
+#### Ambiente Sandbox (testes)
+1. Utilize o seguinte token: **78e670d6-bbbc-4cec-a4e8-79556aa61dfc**
+
+#### Ambiente Produção
+1. Acesse: https://clubedev.com.br
+2. Compre seu token
+3. Acesse sua conta em: https://painel.clubedev.com.br
+4. Vá ao menu **Tokens**
+5. Clique em **Configurar Token**
+6. Preencha os dados e clique em **Salvar**
+
 ### Gerando seu Token PagBank
 
 #### Ambiente Sandbox (testes)
