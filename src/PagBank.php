@@ -40,9 +40,9 @@ class PagBank
         return new GetPaymentResponse($this->client->get("libraries/pagbank/payment/{$orderId}"));
     }
 
-    public function cancelPayment(mixed $chargeId, float $amount): CancelPaymentResponse
+    public function cancelPayment(mixed $charge_id, float $amount): CancelPaymentResponse
     {
-        return new CancelPaymentResponse($this->client->delete("libraries/pagbank/payment/{$chargeId}", ['amount' => $amount]));
+        return new CancelPaymentResponse($this->client->delete("libraries/pagbank/payment/{$charge_id}", ['amount' => $amount]));
     }
 
     public function webhook(array $data): PaymentWebhook
