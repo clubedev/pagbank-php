@@ -1,6 +1,6 @@
-# PHP PagBank SDK — Integração com PagBank + ClubeDev
+# PHP PagBank — Integração com PagBank
 
-Este SDK facilita pagamentos com PagBank utilizando a ponte oficial da **ClubeDev**, permitindo criar cobranças, consultar transações e realizar cancelamentos totais ou parciais de maneira simples e padronizada.
+Este SDK facilita pagamentos com PagBank utilizando a ponte oficial do **ClubeDev**, permitindo criar cobranças, consultar transações e realizar cancelamentos totais ou parciais de maneira simples e padronizada.
 
 A biblioteca foi desenvolvida para ser utilizada por **programadores iniciantes e intermediários**, com foco em simplicidade, clareza e segurança.
 

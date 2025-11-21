@@ -14,7 +14,7 @@ class PagBankClient
     public function __construct(string $pagBankToken, string $clubeDevToken, bool $sandbox = false)
     {
         $this->http = new Client([
-            'base_uri' => 'http://localhost:8000/api/' . ($sandbox ? 'sandbox/' : ''),
+            'base_uri' => 'https://clubedev.com.br/api/' . ($sandbox ? 'sandbox/' : ''),
             'timeout'  => 10,
             'headers'  => [
                 'X-PAGBANK-TOKEN' => $pagBankToken,
