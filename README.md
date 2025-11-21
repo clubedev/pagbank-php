@@ -55,7 +55,7 @@ Ambos são obrigatórios para validação, segurança e auditoria das operaçõe
 ### Adquirindo e configurando seu Token ClubeDev
 
 #### Ambiente Sandbox (testes)
-1. Utilize o seguinte token: **78e670d6-bbbc-4cec-a4e8-79556aa61dfc**
+1. Utilize o seguinte token: `78e670d6-bbbc-4cec-a4e8-79556aa61dfc`
 
 #### Ambiente Produção
 1. Acesse: https://clubedev.com.br
