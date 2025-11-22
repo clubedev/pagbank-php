@@ -186,6 +186,8 @@ $qrcodeImage = $response->payment()?->pix?->qrcode_image;
 
 ## Criar pagamento Cartão
 
+Para criar pagamento com cartão é obrigatório a utilização da biblioteca frontend **[@clubedev/pagbank-encrypt-card](https://www.npmjs.com/package/@clubedev/pagbank-encrypt-card)** para gerar o **card_token**
+
 ```php
 use ClubeDev\PagBank\Domain\Client;
 use ClubeDev\PagBank\Domain\Phone;
