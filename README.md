@@ -111,6 +111,7 @@ use ClubeDev\PagBank\Domain\Payment;
 use ClubeDev\PagBank\Domain\Payment\Pix;
 
 $response = $payment->createPayment(
+    reference: "identificação-informada-por-você", // Geralmente utilizado algum id
     client: new Client(
         document: "12345678909", 
         name: "João", 
@@ -199,6 +200,7 @@ use ClubeDev\PagBank\Domain\Payment\CreditCard;
 use ClubeDev\PagBank\Domain\Payment\Holder;
 
 $response = $payment->createPayment(
+    reference: "identificação-informada-por-você", // Geralmente utilizado algum id
     client: new Client(
         document: "12345678909", 
         name: "João", 
@@ -297,6 +299,7 @@ use ClubeDev\PagBank\Domain\Payment\Title;
 use ClubeDev\PagBank\Domain\Payment\Holder;
 
 $response = $payment->createPayment(
+    reference: "identificação-informada-por-você", // Geralmente utilizado algum id
     client: new Client(
         document: "12345678909", 
         name: "João", 
