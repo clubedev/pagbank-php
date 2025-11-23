@@ -41,7 +41,7 @@ class CreatePaymentRequest
             'payment' => $this->payment?->toArray(),
             'items' => !empty($this->items) ? array_map(fn(Item $item) => $item->toArray(), $this->items) : null,
             'shipping' => $this->shipping?->toArray(),
-            'webhooks_urls' => [$this->webhook_url],
+            'webhooks_urls' => !empty($this->webhook_url) ? [$this->webhook_url] : null,
         ]);
     }
 }
