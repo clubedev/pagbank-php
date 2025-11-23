@@ -30,7 +30,7 @@ A biblioteca foi desenvolvida para ser utilizada por **programadores iniciantes 
 # Instalação
 
 ```bash
-composer require clubedev/php-pagbank
+composer require clubedev/pagbank-php
 ```
 
 ---
